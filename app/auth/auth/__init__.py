@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for, flash,current_app
+from flask import Blueprint, render_template, redirect, url_for, flash, current_app
 from flask_login import login_user, login_required, logout_user, current_user
 from werkzeug.security import generate_password_hash
 
@@ -32,7 +32,6 @@ def register():
             return redirect(url_for('auth.login'), 302)
     return render_template('register.html', form=form)
 
-
 @auth.route('/login', methods=['POST', 'GET'])
 def login():
     form = login_form()
@@ -52,7 +51,6 @@ def login():
             return redirect(url_for('auth.dashboard'))
     return render_template('login.html', form=form)
 
-
 @auth.route("/logout")
 @login_required
 def logout():
@@ -63,6 +61,7 @@ def logout():
     db.session.commit()
     logout_user()
     return redirect(url_for('auth.login'))
+
 
 
 @auth.route('/dashboard')
@@ -98,7 +97,9 @@ def edit_account():
     return render_template('manage_account.html', form=form)
 
 
-#You should probably move these to a new Blueprint to clean this up. These functions below are for user management
+# KW: You should probably move these to a new Blueprint to clean this up
+# The below functions are for user management
+
 
 @auth.route('/users')
 @login_required
@@ -110,8 +111,6 @@ def browse_users():
     edit_url = ('auth.edit_user', [('user_id', ':id')])
     add_url = url_for('auth.add_user')
     delete_url = ('auth.delete_user', [('user_id', ':id')])
-
-    current_app.logger.info("Browse page loading")
 
     return render_template('browse.html', titles=titles, add_url=add_url, edit_url=edit_url, delete_url=delete_url,
                            retrieve_url=retrieve_url, data=data, User=User, record_type="Users")
@@ -169,8 +168,3 @@ def delete_user(user_id):
     db.session.commit()
     flash('User Deleted', 'success')
     return redirect(url_for('auth.browse_users'), 302)
-
-
-
-
-
