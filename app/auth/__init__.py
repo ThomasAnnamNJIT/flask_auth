@@ -32,6 +32,7 @@ def register():
             return redirect(url_for('auth.login'), 302)
     return render_template('register.html', form=form)
 
+
 @auth.route('/login', methods=['POST', 'GET'])
 def login():
     form = login_form()
@@ -51,6 +52,7 @@ def login():
             return redirect(url_for('auth.dashboard'))
     return render_template('login.html', form=form)
 
+
 @auth.route("/logout")
 @login_required
 def logout():
@@ -61,7 +63,6 @@ def logout():
     db.session.commit()
     logout_user()
     return redirect(url_for('auth.login'))
-
 
 
 @auth.route('/dashboard')
