@@ -16,3 +16,9 @@ WHERE users.id = ?
 2022-04-19 02:17:58,598 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("users")
 2022-04-19 02:17:58,598 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
 2022-04-19 02:17:58,599 [INFO] sqlalchemy.engine.Engine: COMMIT
+2022-04-19 03:23:27,482 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2022-04-19 03:23:27,484 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("songs")
+2022-04-19 03:23:27,485 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2022-04-19 03:23:27,486 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("users")
+2022-04-19 03:23:27,487 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2022-04-19 03:23:27,487 [INFO] sqlalchemy.engine.Engine: COMMIT
