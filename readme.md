@@ -7,7 +7,7 @@
 
 [![Development Workflow](https://github.com/ThomasAnnamNJIT/flask_auth/actions/workflows/dev.yml/badge.svg)](https://github.com/ThomasAnnamNJIT/flask_auth/actions/workflows/dev.yml)
 
-* [Developmental Deployment](https://thomasannam-flask-dev-prod.herokuapp.com)
+* [Developmental Deployment](https://thomasannam-flask-auth-dev.herokuapp.com)
 
 ## Setting up CI/CD
 
