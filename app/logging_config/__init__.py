@@ -39,6 +39,7 @@ def configure_logging():
     log = logging.getLogger("myApp")
     log.info("My App Logger")
 
+
 LOGGING_CONFIG = {
     'version': 1,
     'disable_existing_loggers': True,

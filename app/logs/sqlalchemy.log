@@ -1,0 +1,6 @@
+2022-04-19 03:09:42,574 [INFO] sqlalchemy.engine.Engine: BEGIN (implicit)
+2022-04-19 03:09:42,574 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("songs")
+2022-04-19 03:09:42,575 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2022-04-19 03:09:42,576 [INFO] sqlalchemy.engine.Engine: PRAGMA main.table_info("users")
+2022-04-19 03:09:42,576 [INFO] sqlalchemy.engine.Engine: [raw sql] ()
+2022-04-19 03:09:42,577 [INFO] sqlalchemy.engine.Engine: COMMIT
